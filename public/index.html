@@ -1,112 +1,27 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.min.js"></script>
-	
-	<script>
-		$(document).ready(function () {
-
-			// preloader
-
-			$('#before-load').find('i').fadeOut().end().delay(400).fadeOut('slow');
-
-			// code for menu on mobile
-			
-			var menuWrapper = $('.menu_responsive');
-			var openMenuBtn = $('.open-menu-btn');
-			var menuItem = $('.menu__item');
-
-			openMenuBtn.unbind().click(function () {
-				openMenuBtn.toggleClass('active');
-				menuWrapper.toggleClass('open');
-				$('body').toggleClass('hidden')
-			});
-
-			menuItem.click(function () {
-				menuWrapper.removeClass('open');
-				openMenuBtn.removeClass('active');
-				$('body').removeClass('hidden')
-			});
-			
-			// slider with logos
-			
-			$('.responsive-slider').slick({
-				arrows: false,
-				dots: true,
-				infinite: true,
-				speed: 1000,
-				autoplay: true,
-				autoplaySpeed: 6000,
-				slidesToShow: 5,
-				slidesToScroll: 5,
-				responsive: [
-					{
-						breakpoint: 961,
-						settings: {
-							slidesToShow: 4,
-							slidesToScroll: 4
-						}
-					},
-					{
-						breakpoint: 768,
-						settings: {
-							slidesToShow: 3,
-							slidesToScroll: 3
-						}
-					}
-				]
-			});
-			
-			// slider for reviews
-
-			$('.single-slider').slick({
-				arrows: false,
-				dots: true,
-				infinite: true,
-				speed: 1000,
-				autoplay: true,
-				autoplaySpeed: 6000,
-				slidesToShow: 1,
-				slidesToScroll: 1
-			});
-			
-			// scroll to anchor
-
-			$('a[href*="#"]').on('click', function (e) {
-				e.preventDefault();
-				e.stopPropagation();
-				var target = $(this).attr('href');
-				$(target).velocity('scroll', {
-					duration: 1500,
-					offset: 0,
-					easing: 'ease-in-out'
-				});
-			});
-
-			new WOW({
-				mobile: false
-			}).init();
-		});
-		
-	</script>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link rel="icon" href="./favicon.ico" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+		<title><%= htmlWebpackPlugin.options.title %></title>
+	</head>
+	<body id="app-theme" class="app-theme">
+		<noscript>
+			<strong
+				>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't
+				work properly without JavaScript enabled. Please enable it to
+				continue.</strong
+			>
+		</noscript>
+		<div id="app"></div>
+		<!-- built files will be auto injected -->
+	</body>
 </html>
