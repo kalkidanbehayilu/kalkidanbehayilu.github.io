@@ -1,5 +1,5 @@
 const teckStacks = {
-  frameWorksHeading: "Teck Stack",
+  frameWorksHeading: "Tech Stack",
   frameWorks: [
     {
       id: 1,
