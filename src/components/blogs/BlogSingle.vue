@@ -4,7 +4,7 @@
 		aria-label="Single Blog">
 		<div>
 			<div class="h-80 overflow-hidden">
-				<img :src="blog.img" :alt="blog.title" class="rounded-t-xl border-none" />
+				<img :src="blog.img" :alt="blog.title" class="rounded-t-xl border-none object-cover h-full w-full object-left" />
 			</div>
 			<div class="text-center px-4 py-6">
 				<p class="font-general-semibold text-xl text-ternary-dark dark:text-ternary-light font-bold mb-2">

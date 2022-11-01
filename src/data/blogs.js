@@ -3,10 +3,10 @@
 
 const blogs = [
   {
-    id: "google-health-platform",
+    id: "big-numbers-in-javascript",
     title: "Google Health Platform",
     category: "Web Application",
-    img: require("@/assets/images/mobile-project-2.jpg"),
+    img: require("@/assets/images/blog/big-number.png"),
 	detail: "Here we are getting data from a js file, but in a different blog I'll be fetching these blogs from some srt of APIs.",
     singleBlogHeader: {
       singleBlogTitle: "Blog Management UI",
