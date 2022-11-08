@@ -37,11 +37,11 @@ export default {
 		<!-- Blog header -->
 		<BlogHeader v-if="blog" :singleBlogHeader="blog?.singleBlogHeader" />
 
-		<!-- Blog gallery -->
-		<BlogGallery v-if="blog" :blogImages="blog?.blogImages" />
-
 		<!-- Blog information -->
 		<BlogInfo v-if="blog" :blogInfo="blog?.blogInfo" />
+
+		<!-- Blog gallery -->
+		<BlogGallery v-if="blog" :blogImages="blog?.blogImages" />
 
 		<!-- Blog related blogs -->
 		<BlogRelatedBlogs v-if="relatedBlogs" :relatedBlogs="relatedBlogs" />

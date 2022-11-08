@@ -1,6 +1,6 @@
 <script>
 export default {
-	props: ['projectImages'],
+	props: ['blogImages'],
 };
 </script>
 
@@ -8,13 +8,13 @@ export default {
 	<div class="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
 		<div
 			class="mb-10 sm:mb-0"
-			v-for="projectImage in projectImages"
-			:key="projectImage.id"
+			v-for="blogImage in blogImages"
+			:key="blogImage.id"
 		>
 			<img
-				:src="projectImage.img"
+				:src="blogImage.img"
 				class="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
-				alt="{{ projectImage.title }}"
+				alt="{{ blogImage.title }}"
 			/>
 		</div>
 	</div>
