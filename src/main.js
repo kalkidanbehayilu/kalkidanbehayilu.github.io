@@ -4,6 +4,7 @@ import router from './router';
 import './assets/css/app.css';
 import BackToTop from 'vue-backtotop';
 import VueCodeHighlight from "vue-code-highlight";
+import VueSocialSharing from "vue-social-sharing";
 
 const feather = require('feather-icons');
 feather.replace();
@@ -12,6 +13,7 @@ createApp(App)
 	.use(router)
 	.use(BackToTop)
 	.use(VueCodeHighlight)
+	.use(VueSocialSharing)
 	.mount('#app');
 
 const appTheme = localStorage.getItem('theme');

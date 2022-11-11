@@ -52,10 +52,20 @@ export default {
 					{{ blogInfo.socialSharingsHeading }}
 				</p>
 				<div class="flex items-center gap-3 mt-5">
-					<a v-for="social in blogInfo.socialSharings" :key="social.id" :href="social.url" target="__blank"
+					<div v-for="social in blogInfo.socialSharings" :key="social.id" target="__blank"
 						aria-label="Share Blog"
-						class="bg-ternary-light dark:bg-ternary-dark text-gray-400 hover:text-primary-dark dark:hover:text-primary-light p-2 rounded-lg shadow-sm duration-500"><i
-							:data-feather="social.icon" class="w-4 lg:w-5 h-4 lg:h-5"></i></a>
+						class="bg-ternary-light dark:bg-ternary-dark text-gray-400 hover:text-primary-dark dark:hover:text-primary-light p-2 rounded-lg shadow-sm duration-500">
+						<ShareNetwork 
+							:network="social?.name" 
+							:url="social?.url"
+							:title="social?.title"
+							:description="social?.description"
+							:quote="social?.quote"
+							:media="social.media"
+							hashtags="Vuejs,Javascript">
+							<i :data-feather="social?.icon" class="w-4 lg:w-5 h-4 lg:h-5"></i>
+						</ShareNetwork>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -223,22 +223,24 @@ const blogs = [
       socialSharings: [
         {
           id: 1,
-          name: "Twitter",
-          icon: "twitter",
-          url: "https://twitter.com",
-        },
-        {
-          id: 2,
-          name: "Instagram",
-          icon: "instagram",
-          url: "https://instagram.com",
-        },
-        {
-          id: 4,
           name: "LinkedIn",
           icon: "linkedin",
-          url: "https://linkedin.com/",
+          url: "https://kalkidanbehayilu.github.io/blogs/big-numbers-in-javascript",
+          title: "The Javascript understanding of huge number representation and how an interpreter scans through the code.",
+          description: "Number is a primitive wrapper object used to represent and manipulate numbers. The Number constructor contains constants and methods for working with numbers. A literal number in JavaScript code is a floating-point value.",
+          quote: "Big numbers in javascript",
+          media: require("@/assets/images/blog/big-number.png")
         },
+        {
+          id: 1,
+          name: "Twitter",
+          icon: "twitter",
+          url: "https://kalkidanbehayilu.github.io/blogs/big-numbers-in-javascript",
+          title: "The Javascript understanding of huge number representation and how an interpreter scans through the code.",
+          description: "Number is a primitive wrapper object used to represent and manipulate numbers. The Number constructor contains constants and methods for working with numbers. A literal number in JavaScript code is a floating-point value.",
+          quote: "Big numbers in javascript",
+          media: require("@/assets/images/blog/big-number.png")
+        }
       ],
     },
   },
