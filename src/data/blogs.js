@@ -39,7 +39,7 @@ const blogs = [
             {
               id: 1,
               details: `Number is a primitive wrapper object used to represent and manipulate numbers. The Number constructor contains constants and methods for working with numbers. A literal number in JavaScript code is a floating-point value.
-              We don't have a separate integer type regularly employed <a class="text-blue-700 font-bold" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Source<a/>. To understand Number type check <a class="text-blue-700 font-bold" href="https://www.henoktsegaye.com/blogs/javascript-number-types/"> Henoks post about Number types</a>`,
+              We don't have a separate integer type regularly employed (<a class="text-blue-700 font-bold" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Source<a/>). To understand Number type check <a class="text-blue-700 font-bold" href="https://www.henoktsegaye.com/blogs/javascript-number-types/"> Henoks post about Number types</a>`,
             },
             {
               id: 1,
