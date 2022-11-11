@@ -68,8 +68,9 @@ export default {
 				</p>
 				<p v-for="blogDetail in blogContent.blogDetails" :key="blogDetail.id"
 					class="font-general-regular mb-5 text-lg text-ternary-dark dark:text-ternary-light">
+					<img v-if="blogDetail.img" :src="blogDetail.img" class="cursor-pointer my-4" alt="Image" />
 					<template v-if="blogDetail.isCodeSnippet">
-						<CodeSnippet :content="blogDetail.details"/>
+						<CodeSnippet :content="blogDetail.details" />
 					</template>
 					<template v-else>
 						<div v-html="blogDetail.details"></div>
