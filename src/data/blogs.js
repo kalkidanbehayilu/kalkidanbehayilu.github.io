@@ -135,7 +135,7 @@ const blogs = [
               details: `<span class="font-bold text-xl">How to use it</span>
               <br>
               <br>
-              You can use the <span class="text-blue-700 font-bold">BigInt()</span> constructor, you don't have instantiate or use the <span class="text-blue-700">new</span> keyword
+              You can use the <span class="text-blue-700 font-bold">BigInt()</span> constructor, you don't have to instantiate or use the <span class="text-blue-700">new</span> keyword
               `,
             },
             {
@@ -151,7 +151,7 @@ const blogs = [
               details: `<span class="font-bold text-xl">Alternative method</span>
               <br>
               <br>
-              You can use the also use <span class="text-blue-700">n</span> prefix after the number.
+              You can also use <span class="text-blue-700">n</span> prefix after the number.
               `,
             },
             {
@@ -173,7 +173,9 @@ const blogs = [
               details: `<span class="font-bold text-xl">Operations in BigInt</span>
               <br>
               <br>
-              <span class="text-blue-700">Bitwise operators </span> are supported, except <span class="text-blue-700">>>> (zero-fill right shift)</span>, as every BigInt value is signed. Lets user <span class="text-blue-700 font-extrabold"> + * - % ** </span>
+              <span class="text-blue-700">Bitwise operators </span> are supported, except <span class="text-blue-700">>>> (zero-fill right shift)</span>, as every BigInt value is signed. 
+              <br>
+              Lets try <span class="text-blue-700 font-extrabold"> + * - % ** </span> operators as an example
               `,
             },
             {
