@@ -76,16 +76,19 @@ export default {
 				<p class="font-general-medium text-primary-dark dark:text-primary-light text-2xl font-bold mb-7">
 					{{ blogContent.blogDetailsHeading }}
 				</p>
-				<p v-for="blogDetail in blogContent.blogDetails" :key="blogDetail.id"
+				<div v-for="blogDetail in blogContent.blogDetails" :key="blogDetail.id"
 					class="font-general-regular mb-5 text-lg text-ternary-dark dark:text-ternary-light">
-					<img v-if="blogDetail.img" :src="blogDetail.img" class="cursor-pointer my-4" alt="Image" />
+					<figure v-if="blogDetail.img" class="mb-5">
+						<img :src="blogDetail.img?.url" class="cursor-pointer my-4" alt="Image" />
+						<figcaption>{{ blogDetail.img?.caption}}</figcaption>
+					</figure>
 					<template v-if="blogDetail.isCodeSnippet">
 						<CodeSnippet :content="blogDetail.details" />
 					</template>
 					<template v-else>
 						<div v-html="blogDetail.details"></div>
 					</template>
-				</p>
+				</div>
 			</div>
 		</div>
 	</div>

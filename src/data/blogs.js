@@ -53,7 +53,7 @@ const blogs = [
             {
               id: 2,
               details: `Numbers in Javascript are represented as a <a class="text-blue-700 font-bold" href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">Double-precision floating-point format</a> occupying <span class="text-blue-700">64</span> bits of memory and it represents a broad dynamic range of numerical values. 
-              If we have a <span class="text-blue-700">64-bit</span> storage, can we have a minimum value of <span class="text-blue-700">-9,223,372,036,854,775,808</span> and a maximum value of <span class="text-blue-700">9,223,372,036,854,775,807</span> you might ask? Unfortunately <span class="font-extrabold text-rose-500 animate-pulse">NO!</span>`,
+              If we have a <span class="text-blue-700">64-bit</span> storage, can we have a value of <span class="text-blue-700">18,446,744,073,709,551,616</span> you might ask? Unfortunately <span class="font-extrabold text-rose-500 animate-pulse">NO!</span>`,
             },
             {
               id: 2,
@@ -61,12 +61,16 @@ const blogs = [
             },
             {
               id: 3,
-              isCodeSnippet: true,
               details: `
-              1 bit for the sign (positive or negative)
-              11 bits for the exponent (-1022 to 1023)
-              52 bits for the mantissa (representing a number between 0 and 1)`,
-              img: require("@/assets/images/blog/64bit-representation.webp")
+              <ul style="list-style-type:circle">
+                <li>1 bit for the sign (positive or negative)</li>
+                <li>11 bits for the exponent (-1022 to 1023)</li>
+                <li>52 bits for the mantissa (representing a number between 0 and 1)</li>
+              </ul>`,
+              img: {
+                caption: "From Wikipedia: https://en.wikipedia.org/wiki/Double-precision_floating-point_format",
+                url: require("@/assets/images/blog/64bit-representation.webp")
+              }
             },
             {
               id: 4,
@@ -128,6 +132,8 @@ const blogs = [
               details: `This is where <span class="text-blue-700 font-bold">BIGINT</span> comes.
               <br><br>
               <span class="text-blue-700 font-bold">BIGINT</span> is a built-in object in JavaScript that provides a way to represent numbers larger than <span class="text-blue-700 font-bold">2<sup>53-1</sup></span>.
+              As I mentioned previously, <span class="text-blue-700 font-bold">BIGINT</span> is a built-in object and we can't generally determine the occupied memory size of it. Thus, implementations can choose their own limits.
+              <a class="text-blue-700 font-bold" href="https://github.com/tc39/proposal-bigint/issues/174">Take a look at this github issue asking about BigInt size specifications</a>.
               It is usefull when we work with timestamps and large integer Numbers (like ID's)`,
             },
             {

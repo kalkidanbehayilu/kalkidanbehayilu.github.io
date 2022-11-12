@@ -7,26 +7,23 @@ const projects = [
     title: "Maritime software platform",
     category: "Web Application",
     img: require("@/assets/images/projects/helm-connect.webp"),
-    detail:
-      "Platform For Your Marine Operations. Connects your maintenance, compliance, personnel and operations together in one easy to use system.",
+    detail: "",
     link: "https://www.helmoperations.com/",
   },
   {
     id: "epp",
-    title: "Maritime software platform",
+    title: "Excellerent software platform",
     category: "Web Application",
     img: require("@/assets/images/projects/epp.png"),
-    detail:
-      "Platform For Your Marine Operations. Connects your maintenance, compliance, personnel and operations together in one easy to use system.",
+    detail: "",
     link: "https://excellerentsolutions.com/",
   },
   {
     id: "american-car-center",
-    title: "Maritime software platform",
+    title: "American software platform",
     category: "Web Application",
     img: require("@/assets/images/projects/american-car-center.jpg"),
-    detail:
-      "Platform For Your Marine Operations. Connects your maintenance, compliance, personnel and operations together in one easy to use system.",
+    detail: "",
     link: "https://www.americancarcenter.com/",
   },
   {
@@ -34,17 +31,15 @@ const projects = [
     title: "Maritime software platform",
     category: "Web Application",
     img: require("@/assets/images/projects/taxiye.png"),
-    detail:
-      "Platform For Your Marine Operations. Connects your maintenance, compliance, personnel and operations together in one easy to use system.",
+    detail: "",
     link: "https://taxiye.com/",
   },
   {
     id: "presence",
-    title: "Maritime software platform",
+    title: "Block-chain software platform",
     category: "Web Application",
     img: require("@/assets/images/projects/presence.png"),
-    detail:
-      "Platform For Your Marine Operations. Connects your maintenance, compliance, personnel and operations together in one easy to use system.",
+    detail: "Web Application",
     link: "https://www.presencebrowser.com/",
   },
   {
@@ -52,16 +47,15 @@ const projects = [
     title: "Gibya Mobile Payment Service",
     category: "Mobile Application",
     img: require("@/assets/images/projects/milto.jpg"),
-    detail: "A mobile app",
+    detail: "A mobile and web app",
     link: "https://google.com",
   },
   {
     id: "think-hub-exam-app",
-    title: "Maritime software platform",
-    category: "Mobile and Web Application",
+    title: "Exam time for think-hub",
+    category: "Mobile Application",
     img: require("@/assets/images/projects/think-hub.png"),
-    detail:
-      "Platform For Your Marine Operations. Connects your maintenance, compliance, personnel and operations together in one easy to use system.",
+    detail: "A mobile app",
     link: "https://think-hubet.com/",
   },
   {
