@@ -39,7 +39,7 @@ const blogs = [
             {
               id: 1,
               details: `Number is a primitive wrapper object used to represent and manipulate numbers. The Number constructor contains constants and methods for working with numbers. A literal number in JavaScript code is a floating-point value.
-              We don't have a separate integer type regularly employed (<a class="text-blue-700 font-bold" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Source<a/>). To understand Number type check <a class="text-blue-700 font-bold" href="https://www.henoktsegaye.com/blogs/javascript-number-types/"> Henoks post about Number types</a>`,
+              We don't have a separate integer type regularly employed (<a class="text-indigo-500 font-bold" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Source<a/>). To understand Number type check <a class="text-indigo-500 font-bold" href="https://www.henoktsegaye.com/blogs/javascript-number-types/"> Henoks post about Number types</a>`,
             },
             {
               id: 1,
@@ -52,8 +52,8 @@ const blogs = [
             },
             {
               id: 2,
-              details: `Numbers in Javascript are represented as a <a class="text-blue-700 font-bold" href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">Double-precision floating-point format</a> occupying <span class="text-blue-700">64</span> bits of memory and it represents a broad dynamic range of numerical values. 
-              If we have a <span class="text-blue-700">64-bit</span> storage, can we have a value of <span class="text-blue-700">18,446,744,073,709,551,616</span> you might ask? Unfortunately <span class="font-extrabold text-rose-500 animate-pulse">NO!</span>`,
+              details: `Numbers in Javascript are represented as a <a class="text-indigo-500 font-bold" href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">Double-precision floating-point format</a> occupying <span class="text-indigo-500">64</span> bits of memory and it represents a broad dynamic range of numerical values. 
+              If we have a <span class="text-indigo-500">64-bit</span> storage, can we have a value of <span class="text-indigo-500">18,446,744,073,709,551,616</span> you might ask? Unfortunately <span class="font-extrabold text-rose-500 animate-pulse">NO!</span>`,
             },
             {
               id: 2,
@@ -74,7 +74,7 @@ const blogs = [
             },
             {
               id: 4,
-              details: `But how do we represent large numbers greater than <span class="text-blue-700">52</span> bits? Easy, use the <span class="text-blue-700">11</span> bits for the exponents! It can hold upto <span class="text-blue-700">2<sup>1024 - 1</sup></span> (with the exponent being <span class="text-blue-700">1023</span> and the mantissa being <span class="text-blue-700">0.1111… in base 2</span>).`
+              details: `But how do we represent large numbers greater than <span class="text-indigo-500">52</span> bits? Easy, use the <span class="text-indigo-500">11</span> bits for the exponents! It can hold upto <span class="text-indigo-500">2<sup>1024 - 1</sup></span> (with the exponent being <span class="text-indigo-500">1023</span> and the mantissa being <span class="text-indigo-500">0.1111… in base 2</span>).`
             },
             {
               id: 5,
@@ -85,7 +85,7 @@ const blogs = [
             },
             {
               id: 5,
-              details: `Based on the MAX_VALUE, you might think you can represent any number under <span class="text-blue-700">1.7976931348623157e+308</span> without any problem. But that's not the case. Let's see why`
+              details: `Based on the MAX_VALUE, you might think you can represent any number under <span class="text-indigo-500">1.7976931348623157e+308</span> without any problem. But that's not the case. Let's see why`
             },
             {
               id: 6,
@@ -107,7 +107,7 @@ const blogs = [
             },
             {
               id: 7,
-              details: `The problem is that we can only store <span class="text-blue-700">52</span> bits of data, so it can only safely represent integers between <span class="text-blue-700">-(2<sup>53 – 1</sup>)</span> and <span class="text-blue-700">2<sup>53 – 1</sup></span>. That means the maximum number we can store is <span class="text-blue-700">9,007,199,254,740,991</span> or <span class="text-blue-700">-9,007,199,254,740,991</span>`
+              details: `The problem is that we can only store <span class="text-indigo-500">52</span> bits of data, so it can only safely represent integers between <span class="text-indigo-500">-(2<sup>53 – 1</sup>)</span> and <span class="text-indigo-500">2<sup>53 – 1</sup></span>. That means the maximum number we can store is <span class="text-indigo-500">9,007,199,254,740,991</span> or <span class="text-indigo-500">-9,007,199,254,740,991</span>`
             },
             {
               id: 8,
@@ -118,7 +118,7 @@ const blogs = [
             },
             {
               id: 9,
-              details: `Any number respresentation over or under the specified range will be considered as <span class="text-blue-700">Overflow</span> or <span class="text-blue-700">Underflow</span>.
+              details: `Any number respresentation over or under the specified range will be considered as <span class="text-indigo-500">Overflow</span> or <span class="text-indigo-500">Underflow</span>.
               `
             }
           ],
@@ -129,11 +129,11 @@ const blogs = [
           blogDetails: [
             {
               id: 10,
-              details: `This is where <span class="text-blue-700 font-bold">BIGINT</span> comes.
+              details: `This is where <span class="text-indigo-500 font-bold">BIGINT</span> comes.
               <br><br>
-              <span class="text-blue-700 font-bold">BIGINT</span> is a built-in object in JavaScript that provides a way to represent numbers larger than <span class="text-blue-700 font-bold">2<sup>53-1</sup></span>.
-              As I mentioned previously, <span class="text-blue-700 font-bold">BIGINT</span> is a built-in object and we can't generally determine the occupied memory size of it. Thus, implementations can choose their own limits.
-              <a class="text-blue-700 font-bold" href="https://github.com/tc39/proposal-bigint/issues/174">Take a look at this github issue asking about BigInt size specifications</a>.
+              <span class="text-indigo-500 font-bold">BIGINT</span> is a built-in object in JavaScript that provides a way to represent numbers larger than <span class="text-indigo-500 font-bold">2<sup>53-1</sup></span>.
+              As I mentioned previously, <span class="text-indigo-500 font-bold">BIGINT</span> is a built-in object and we can't generally determine the occupied memory size of it. Thus, implementations can choose their own limits.
+              <a class="text-indigo-500 font-bold" href="https://github.com/tc39/proposal-bigint/issues/174">Take a look at this github issue asking about BigInt size specifications</a>.
               It is usefull when we work with timestamps and large integer Numbers (like ID's)`,
             },
             {
@@ -141,7 +141,7 @@ const blogs = [
               details: `<span class="font-bold text-xl">How to use it</span>
               <br>
               <br>
-              You can use the <span class="text-blue-700 font-bold">BigInt()</span> constructor, you don't have to instantiate or use the <span class="text-blue-700">new</span> keyword
+              You can use the <span class="text-indigo-500 font-bold">BigInt()</span> constructor, you don't have to instantiate or use the <span class="text-indigo-500">new</span> keyword
               `,
             },
             {
@@ -157,7 +157,7 @@ const blogs = [
               details: `<span class="font-bold text-xl">Alternative method</span>
               <br>
               <br>
-              You can also use <span class="text-blue-700">n</span> prefix after the number.
+              You can also use <span class="text-indigo-500">n</span> prefix after the number.
               `,
             },
             {
@@ -169,7 +169,7 @@ const blogs = [
 
               // NOTE: This won't work as expected
               const y = 90071992547409919007199254740991;
-              console.log(y); 
+              console.log(y); // 9.007199254740992e+31
               // The reason is that y has already lost precision.
               // y is being changed on initialization.
               `
@@ -179,9 +179,9 @@ const blogs = [
               details: `<span class="font-bold text-xl">Operations in BigInt</span>
               <br>
               <br>
-              <span class="text-blue-700">Bitwise operators </span> are supported, except <span class="text-blue-700">>>> (zero-fill right shift)</span>, as every BigInt value is signed. 
+              <span class="text-indigo-500">Bitwise operators </span> are supported, except <span class="text-indigo-500">>>> (zero-fill right shift)</span>, as every BigInt value is signed. 
               <br>
-              Lets try <span class="text-blue-700 font-extrabold"> + * - % ** </span> operators as an example
+              Lets try <span class="text-indigo-500 font-extrabold"> + * - % ** </span> operators as an example
               `,
             },
             {
