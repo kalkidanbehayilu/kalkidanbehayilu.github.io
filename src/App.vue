@@ -10,26 +10,43 @@ export default {
 	},
 	data: () => {
 		return {
-			appTheme: localStorage.getItem('theme'),
 		};
 	},
+	computed: {
+		theme() {
+		this.setBodyStyle();
+		return this.$store.state.theme;
+		}
+	},
 	mounted() {
+		this.setBodyStyle();
 		feather.replace();
 	},
 	updated() {
 		feather.replace();
 	},
+	methods: {
+		setBodyStyle(){
+			if (
+				this.$store.state.theme === "dark"
+			) {
+				document.querySelector("body").classList.replace("bg-secondary-light", "bg-primary-dark");
+			} else {
+				document.querySelector("body").classList.replace("bg-primary-dark", "bg-secondary-light");
+			}
+		}
+	}
 };
 </script>
 
 <template>
-	<div :class="appTheme" class="pt-0.5">
+	<div :class="theme" class="pt-0.5">
 		<!-- App header -->
 		<AppHeader />
 
 		<!-- Render active component contents with vue transition -->
 		<transition name="fade" mode="out-in">
-			<router-view :theme="appTheme" />
+			<router-view :theme="theme" :key="$route.fullPath"/>
 		</transition>
 
 		<!-- Scroll to top -->

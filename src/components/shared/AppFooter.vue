@@ -10,26 +10,14 @@ export default {
 					id: 1,
 					name: 'GitHub',
 					icon: 'github',
-					url: 'https://github.com',
+					url: 'https://github.com/kalkidanbehayilu',
 				},
 				{
 					id: 2,
-					name: 'Twitter',
-					icon: 'twitter',
-					url: 'https://twitter.com/',
-				},
-				{
-					id: 3,
-					name: 'Medium',
-					icon: 'book',
-					url: 'https://medium.com',
-				},
-				{
-					id: 4,
-					name: 'Instagram',
-					icon: 'instagram',
-					url: 'https://instagram.com',
-				},
+					name: 'Linkedin',
+					icon: 'linkedin',
+					url: 'httphttps://et.linkedin.com/in/kalkidan-behayilu',
+				}
 			],
 		};
 	},

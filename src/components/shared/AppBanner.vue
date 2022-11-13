@@ -2,23 +2,18 @@
 import feather from 'feather-icons';
 
 export default {
-	name: 'Home',
-	data: () => {
-		return {
-			theme: '',
-		};
-	},
-	created() {
-		this.theme = localStorage.getItem('theme') || 'light';
+	name: 'AppBanner',
+	computed: {
+		theme() {
+			return this.$store.state.theme;
+		}
 	},
 	mounted() {
 		feather.replace();
-		this.theme = localStorage.getItem('theme') || 'light';
 	},
 	updated() {
 		feather.replace();
 	},
-	methods: {},
 };
 </script>
 
@@ -40,14 +35,9 @@ export default {
 			</p>
 		</div>
 
-		<!-- Banner right illustration -->
 		<div class="w-full md:w-2/3 text-right float-right">
 			<img v-if="theme === 'light'" src="@/assets/images/developer-light.svg" alt="Developer" />
 			<img v-else src="@/assets/images/developer-dark.svg" alt="Developer" />
 		</div>
 	</section>
 </template>
-
-<style scoped>
-
-</style>

@@ -25,7 +25,7 @@ export default {
 		>
 			{{ techStack.frameWorksHeading }}
 		</p>
-		<div class="flex flex-wrap mt-10 sm:mt-14 gap-6 justify-evenly">
+		<div class="flex flex-wrap mt-10 sm:mt-14 gap-6 justify-center">
 			<FrameWorkSingle
 				v-for="client in techStack.frameWorks"
 				:key="client.id"
