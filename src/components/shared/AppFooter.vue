@@ -10,13 +10,13 @@ export default {
 					id: 1,
 					name: 'GitHub',
 					icon: 'github',
-					url: 'https://github.com/kalkidanbehayilu',
+					url: 'https://github.com/kalbehayilu',
 				},
 				{
 					id: 2,
 					name: 'Linkedin',
 					icon: 'linkedin',
-					url: 'httphttps://et.linkedin.com/in/kalkidan-behayilu',
+					url: 'https://et.linkedin.com/in/kalkidan-behayilu',
 				}
 			],
 		};

@@ -4,32 +4,44 @@ const teckStacks = {
     {
       id: 1,
       title: "React",
-      img: require("@/assets/images/techstacks/react.png"),
+      img: require("@/assets/images/techstacks/react.svg"),
+      name: "React"
     },
     {
-      id: 1,
-      title: "Vue",
-      img: require("@/assets/images/techstacks/vue.png"),
-    },
-    {
-      id: 1,
+      id: 2,
       title: "Next",
       img: require("@/assets/images/techstacks/nextjs.png"),
+      name: "NextJs"
     },
     {
-      id: 1,
+      id: 3,
+      title: "Vue",
+      img: require("@/assets/images/techstacks/vue.svg"),
+      name: "VueJs"
+    },
+    {
+      id: 4,
       title: "Flutter",
-      img: require("@/assets/images/techstacks/flutter.png"),
+      img: require("@/assets/images/techstacks/flutter.svg"),
+      name: "Flutter"
     },
     {
-      id: 1,
+      id: 5,
       title: "Node",
-      img: require("@/assets/images/techstacks/node.png"),
+      img: require("@/assets/images/techstacks/node.svg"),
+      name: "Node"
     },
     {
-      id: 1,
+      id: 6,
       title: ".Net",
-      img: require("@/assets/images/techstacks/dotnet.png"),
+      img: require("@/assets/images/techstacks/.net.svg"),
+      name: "Dot Net"
+    },
+    {
+      id: 7,
+      title: "Knockout",
+      img: require("@/assets/images/techstacks/knockout.svg"),
+      name: "Knockout"
     },
   ],
 };

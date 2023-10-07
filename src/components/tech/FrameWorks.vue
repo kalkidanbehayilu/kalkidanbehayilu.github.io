@@ -13,7 +13,6 @@ export default {
 	},
 	mounted() {
 		this.techStack = techStackData;
-		console.log(this.techStack);
 	}
 };
 </script>
