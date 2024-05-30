@@ -9,7 +9,9 @@
 		<!-- Blogs -->
 		<BlogsGrid />
 
-		<img class="py-2 w-full" src="https://ghchart.rshah.org/33aba6/kalbehayilu" alt="Kal's git repo" />
+		<div class="mx-auto">
+			<GitRepo />
+		</div>
 
 		<div class="mx-auto">
 			<AboutFrameWorks />
@@ -22,6 +24,7 @@ import AppBanner from '@/components/shared/AppBanner';
 import BlogsGrid from '../components/blogs/BlogsGrid.vue';
 import About from "@/components/about/About.vue";
 import AboutFrameWorks from "../components/tech/FrameWorks.vue";
+import GitRepo from "../components/git/GitRepo.vue";
 
 export default {
 	name: 'Home',
@@ -29,7 +32,8 @@ export default {
 		AppBanner,
 		BlogsGrid,
 		About,
-		AboutFrameWorks
+		AboutFrameWorks,
+		GitRepo
 	},
 };
 </script>
