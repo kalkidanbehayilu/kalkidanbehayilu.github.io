@@ -22,6 +22,6 @@ export default {
 				{{ gitHeading }}
 			</p>
 		</div>
-        <img class="w-full" src="https://ghchart.rshah.org/33aba6/kalbehayilu" alt="Kal's git repo" />
+        <img class="w-full" src="https://ghchart.rshah.org/kalbehayilu" alt="Kal's git repo" />
     </section>
 </template>
