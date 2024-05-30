@@ -9,6 +9,8 @@
 		<!-- Blogs -->
 		<BlogsGrid />
 
+		<img src="https://ghchart.rshah.org/33aba6/kalbehayilu" alt="Kal's git repo" />
+
 		<div class="mx-auto">
 			<AboutFrameWorks />
 		</div>
