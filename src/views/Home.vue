@@ -9,7 +9,7 @@
 		<!-- Blogs -->
 		<BlogsGrid />
 
-		<img src="https://ghchart.rshah.org/33aba6/kalbehayilu" alt="Kal's git repo" />
+		<img class="py-2 w-full" src="https://ghchart.rshah.org/33aba6/kalbehayilu" alt="Kal's git repo" />
 
 		<div class="mx-auto">
 			<AboutFrameWorks />
