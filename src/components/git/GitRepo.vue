@@ -5,6 +5,7 @@ export default {
 	},
 	data: () => {
 		return {
+            gitHeading: 'Github Contributions',
 		};
 	},
 	mounted() {
@@ -13,5 +14,14 @@ export default {
 </script>
 
 <template>
-    <img class="py-2 w-full" src="https://ghchart.rshah.org/33aba6/kalbehayilu" alt="Kal's git repo" />
+    <section class="pt-10 sm:pt-14">
+		<!-- Blogs grid title -->
+		<div class="text-center">
+			<p
+				class="font-general-semibold text-2xl sm:text-5xl font-semibold mb-2 text-ternary-dark dark:text-ternary-light">
+				{{ gitHeading }}
+			</p>
+		</div>
+        <img class="w-full" src="https://ghchart.rshah.org/33aba6/kalbehayilu" alt="Kal's git repo" />
+    </section>
 </template>
