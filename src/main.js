@@ -6,7 +6,6 @@ import BackToTop from "vue-backtotop";
 import VueCodeHighlight from "vue-code-highlight";
 import VueSocialSharing from "vue-social-sharing";
 import store from "./store";
-import VueGtag from 'vue-gtag';
 
 const feather = require("feather-icons");
 feather.replace();
@@ -17,9 +16,6 @@ createApp(App)
   .use(BackToTop)
   .use(VueCodeHighlight)
   .use(VueSocialSharing)
-  .use(VueGtag, {
-    config: { id: process.env.G_TRACKING_NUMBER},
-  })
   .mount("#app");
 
 const appTheme = localStorage.getItem("theme");
