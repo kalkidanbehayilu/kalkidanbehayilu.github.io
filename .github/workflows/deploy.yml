@@ -3,14 +3,14 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - master  # Trigger the deployment when code is pushed to the main branch
+      - master  # Trigger the deployment when code is pushed to the master branch
 
 jobs:
   deploy:
     runs-on: ubuntu-latest  # Run the job on the latest Ubuntu
 
     steps:
-    # Checkout the repository with the correct version of actions/checkout
+    # Checkout the repository
     - name: Checkout code
       uses: actions/checkout@v2  # Correct version of the checkout action
 
@@ -27,6 +27,12 @@ jobs:
     # Build the project (for example, for a static site using a build tool)
     - name: Build project
       run: npm run build  # Make sure you have a build script in your package.json
+
+    # Verify the build directory
+    - name: Verify build output
+      run: |
+        echo "Listing contents of the build folder"
+        ls -al ./dist  # Replace with the actual build output folder like 'build' or 'public'
 
     # Deploy to GitHub Pages
     - name: Deploy to GitHub Pages
