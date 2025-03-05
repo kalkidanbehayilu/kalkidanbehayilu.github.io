@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Trigger the deployment when code is pushed to the main branch
+      - master  # Trigger the deployment when code is pushed to the main branch
 
 jobs:
   deploy:
@@ -12,7 +12,7 @@ jobs:
     steps:
     # Checkout the repository
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v21
 
     # Set up Node.js with the required version
     - name: Set up Node.js
