@@ -20,6 +20,10 @@ jobs:
       with:
         node-version: '22.x'  # Specify the Node.js version (can be 'lts', '14.x', etc.)
 
+    # Clear npm cache (to avoid any caching issues)
+    - name: Clear npm cache
+      run: npm cache clean --force  # Clears the npm cache
+
     # Install dependencies
     - name: Install dependencies
       run: npm install
@@ -39,4 +43,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}  # Token for authentication (provided automatically)
-        publish_dir: ./dist  # Directory containing the built site (adjust if necessary) 
+        publish_dir: ./dist  # Directory containing the built site (adjust if necessary)
