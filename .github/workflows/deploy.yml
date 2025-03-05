@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest  # Run the job on the latest Ubuntu
 
     steps:
-    # Checkout the repository
+    # Checkout the repository with the correct version of actions/checkout
     - name: Checkout code
-      uses: actions/checkout@v21
+      uses: actions/checkout@v2  # Correct version of the checkout action
 
     # Set up Node.js with the required version
     - name: Set up Node.js
