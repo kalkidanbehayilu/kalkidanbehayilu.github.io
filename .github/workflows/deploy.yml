@@ -39,4 +39,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}  # Token for authentication (provided automatically)
-        publish_dir: ./dist  # Directory containing the built site (adjust if necessary)
+        publish_dir: ./dist  # Directory containing the built site (adjust if necessary) 
