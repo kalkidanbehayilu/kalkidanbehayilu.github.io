@@ -1,0 +1,64 @@
+/* Base styles */
+body {
+	@apply font-general-regular;
+}
+
+/* Hero section background */
+.hero-bg {
+	@apply absolute inset-0;
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+	backdrop-filter: blur(10px);
+}
+
+/* Gradient text */
+.gradient-text {
+	@apply bg-clip-text text-transparent bg-gradient-to-r from-accent-light to-accent-dark;
+}
+
+/* Card hover effects */
+.card-hover {
+	@apply transition-all duration-300 hover:scale-105 hover:shadow-lg;
+}
+
+/* Button styles */
+.btn-primary {
+	@apply px-6 py-3 bg-accent-light text-white rounded-full font-medium hover:bg-accent-dark transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-accent-light/20;
+}
+
+.btn-secondary {
+	@apply px-6 py-3 border-2 border-accent-light text-accent-light rounded-full font-medium hover:bg-accent-light hover:text-white transition-all duration-300 hover:scale-105;
+}
+
+/* Section styles */
+.section {
+	@apply py-20;
+}
+
+.section-title {
+	@apply text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800;
+}
+
+/* Form styles */
+.form-input {
+	@apply w-full px-4 py-3 rounded-lg bg-white border border-gray-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent-light/50 focus:border-transparent transition-all duration-300;
+}
+
+/* Animation classes */
+.fade-in {
+	@apply opacity-0 transition-opacity duration-500;
+}
+
+.fade-in.visible {
+	@apply opacity-100;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	.section {
+		@apply py-12;
+	}
+	
+	.section-title {
+		@apply text-2xl mb-8;
+	}
+} 

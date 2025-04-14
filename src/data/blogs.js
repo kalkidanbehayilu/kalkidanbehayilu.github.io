@@ -1,6 +1,6 @@
 // Blogs data.
 
-const blogs = [
+export const blogs = [
   {
     id: "big-numbers-in-javascript",
     title: "Big numbers in javascript",

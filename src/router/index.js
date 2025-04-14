@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/Home.vue';
+import BlogDetail from '../views/BlogDetail.vue';
 
 const routes = [
 	{
@@ -11,26 +12,20 @@ const routes = [
 		},
 	},
 	{
+		path: '/blog/:id',
+		name: 'BlogDetail',
+		component: BlogDetail,
+		meta: {
+			title: 'Kalkidan - Blog Detail',
+		},
+	},
+	{
 		path: '/blogs',
 		name: 'Blogs',
 		component: () =>
 			import(/* webpackChunkName: "blogs" */ '../views/Blogs.vue'),
 		meta: {
 			title: 'Kalkidan - blogs',
-		},
-	},
-	{
-		path: '/blogs/:id',
-		name: 'Single Blog',
-		// route level code-splitting
-		// this generates a separate chunk (blogs.[hash].js) for this route
-		// which is lazy-loaded when the route is visited.
-		component: () =>
-			import(
-				/* webpackChunkName: "blogs" */ '../views/SingleBlog.vue'
-			),
-		meta: {
-			title: 'Kalkidan - Single blog',
 		},
 	},
 	{

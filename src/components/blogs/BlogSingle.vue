@@ -1,38 +1,71 @@
 <template>
-	<router-link :to="`/blogs/${blog.id}`"
-		class="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark"
-		aria-label="Single Blog">
-		<div>
-			<div class="h-80 overflow-hidden">
-				<img :src="blog.img" :alt="blog.title" class="rounded-t-xl border-none object-cover h-full w-full object-left" />
+	<article class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-amber-50 to-amber-100 p-6 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-amber-600/10">
+		<div class="absolute inset-0 bg-gradient-to-br from-amber-600/5 to-amber-600/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+		
+		<div class="relative z-10 flex flex-col h-full">
+			<!-- Image Container -->
+			<div class="relative overflow-hidden rounded-xl mb-6 aspect-video">
+				<img 
+					:src="blog.image" 
+					:alt="blog.title"
+					class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+				/>
+				<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 			</div>
-			<div class="text-center px-4 py-6">
-				<p class="font-general-semibold text-xl text-ternary-dark dark:text-ternary-light font-bold mb-2">
+
+			<!-- Content -->
+			<div class="flex flex-col flex-grow">
+				<!-- Category Tag -->
+				<span class="inline-block px-3 py-1 mb-4 text-sm font-medium text-amber-700 bg-amber-100 rounded-full w-fit">
+					{{ blog.category }}
+				</span>
+
+				<!-- Title -->
+				<h3 class="text-xl font-semibold text-amber-900 mb-3 group-hover:text-amber-700 transition-colors duration-300">
 					{{ blog.title }}
+				</h3>
+
+				<!-- Description -->
+				<p class="text-amber-800 mb-6 line-clamp-3 flex-grow">
+					{{ blog.detail }}
 				</p>
-				<span class="font-general-medium text-lg text-ternary-dark dark:text-ternary-light">{{ blog.detail
-				}}</span>
+
+				<!-- Footer -->
+				<div class="flex items-center justify-between mt-auto">
+					<div class="flex items-center gap-2 text-sm text-amber-600">
+						<FeatherIcon icon="Calendar" class="w-4 h-4" />
+						<span>{{ blog.date }}</span>
+					</div>
+					<router-link 
+						:to="{ name: 'BlogDetail', params: { id: blog.id }}"
+						class="inline-flex items-center gap-2 text-amber-700 hover:text-amber-600 transition-colors duration-300"
+					>
+						<span>Read More</span>
+						<FeatherIcon icon="ArrowRight" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" />
+					</router-link>
+				</div>
 			</div>
 		</div>
-		<div class="my-4 sm:mt-2 flex justify-center">
-			<router-link :to="`/blogs/${blog.id}`"
-				class="font-general-medium flex items-center px-3 py-2 rounded-lg shadow-lg hover:shadow-xl bg-indigo-500 hover:bg-indigo-600 focus:ring-1 focus:ring-indigo-900 text-white text-lg sm:text-xl duration-300"
-				aria-label="Read More">
-				<Button title="Read More" />
-			</router-link>
-		</div>
-	</router-link>
+	</article>
 </template>
 
-<script>
-import Button from '../reusable/Button.vue';
-export default {
-	props: ['blog'],
-	components: { Button },
-};
+<script setup>
+import { defineProps } from 'vue';
+import FeatherIcon from '../reusable/FeatherIcon.vue';
+
+defineProps({
+	blog: {
+		type: Object,
+		required: true
+	}
+});
 </script>
 
-
-<style lang="scss" scoped>
-
+<style scoped>
+.line-clamp-3 {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
 </style>

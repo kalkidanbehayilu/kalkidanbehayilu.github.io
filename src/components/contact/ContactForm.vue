@@ -1,95 +1,89 @@
 <script>
-import Button from '../reusable/Button.vue';
-export default { components: { Button } };
+export default { components: { } };
 </script>
 
 <template>
-	<div class="w-full md:w-1/2">
-		<div
-			class="leading-loose max-w-xl m-4 p-7 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl text-left"
-		>
-			<p
-				class="font-general-medium text-primary-dark dark:text-primary-light text-2xl mb-8"
-			>
-				Contact Form
-			</p>
-			<form action="#" class="font-general-regular space-y-7">
-				<div>
-					<label
-						class="block text-lg text-primary-dark dark:text-primary-light mb-2"
-						for="name"
-						>Full Name</label
-					>
+	<div class="max-w-2xl mx-auto">
+		<form @submit.prevent="handleSubmit" class="space-y-8">
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<div class="space-y-2">
+					<label for="name" class="block text-sm font-medium text-gray-700">Name</label>
 					<input
-						class="w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
+						type="text"
 						id="name"
-						name="name"
-						type="text"
-						required=""
-						placeholder="Your Name"
-						aria-label="Name"
+						v-model="form.name"
+						class="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent-light/50 focus:border-transparent transition-all duration-300"
+						placeholder="Your name"
+						required
 					/>
 				</div>
-				<div>
-					<label
-						class="block text-lg text-primary-dark dark:text-primary-light mb-2"
-						for="email"
-						>Email</label
-					>
+				<div class="space-y-2">
+					<label for="email" class="block text-sm font-medium text-gray-700">Email</label>
 					<input
-						class="w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
+						type="email"
 						id="email"
-						name="email"
-						type="text"
-						required=""
-						placeholder="Your Email"
-						aria-label="Email"
+						v-model="form.email"
+						class="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent-light/50 focus:border-transparent transition-all duration-300"
+						placeholder="Your email"
+						required
 					/>
 				</div>
-				<div>
-					<label
-						class="block text-lg text-primary-dark dark:text-primary-light mb-2"
-						for="subject"
-						>Subject</label
-					>
-					<input
-						class="w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
-						id="subject"
-						name="subject"
-						type="text"
-						required=""
-						placeholder="Subject"
-						aria-label="Subject"
-					/>
-				</div>
-
-				<div>
-					<label
-						class="block text-lg text-primary-dark dark:text-primary-light mb-2"
-						for="message"
-						>Message</label
-					>
-					<textarea
-						class="w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
-						id="message"
-						name="message"
-						cols="14"
-						rows="6"
-						aria-label="Message"
-					></textarea>
-				</div>
-
-				<div>
-					<Button
-						title="Send Message"
-						class="px-4 py-2.5 text-white tracking-wider bg-indigo-500 hover:bg-indigo-600 focus:ring-1 focus:ring-indigo-900 rounded-lg duration-500"
-						type="submit"
-						aria-label="Send Message"
-					/>
-				</div>
-			</form>
-		</div>
+			</div>
+			<div class="space-y-2">
+				<label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+				<input
+					type="text"
+					id="subject"
+					v-model="form.subject"
+					class="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent-light/50 focus:border-transparent transition-all duration-300"
+					placeholder="Subject"
+					required
+				/>
+			</div>
+			<div class="space-y-2">
+				<label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+				<textarea
+					id="message"
+					v-model="form.message"
+					rows="6"
+					class="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent-light/50 focus:border-transparent transition-all duration-300 resize-none"
+					placeholder="Your message"
+					required
+				></textarea>
+			</div>
+			<div class="flex justify-center">
+				<button
+					type="submit"
+					class="px-8 py-4 bg-accent-light text-white rounded-full font-medium hover:bg-accent-dark transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-accent-light/20"
+				>
+					Send Message
+				</button>
+			</div>
+		</form>
 	</div>
 </template>
+
+<script setup>
+import { ref } from 'vue';
+
+const form = ref({
+	name: '',
+	email: '',
+	subject: '',
+	message: ''
+});
+
+const handleSubmit = () => {
+	// Handle form submission
+	console.log('Form submitted:', form.value);
+	// Reset form
+	form.value = {
+		name: '',
+		email: '',
+		subject: '',
+		message: ''
+	};
+};
+</script>
 
 <style lang="scss" scoped></style>
